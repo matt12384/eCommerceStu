@@ -24,6 +24,6 @@ const isUnique = value =>
     })
 
 Validator.extend("uniqueProductName", {
-    validate: IsUnique,
+    validate: isUnique,
     getMessage: (field, params, data) => data.message
 })

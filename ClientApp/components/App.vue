@@ -39,7 +39,7 @@ export default {
         showAuthModal() {
             return this.$store.state.showAuthModal
         },
-        idAdmin() {
+        isAdmin() {
             return this.$store.getters.isInRole('Admin');
         },
         isCustomer() {
