@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const bundleOutputDir = './wwwroot/dist';
 
 module.exports = (env) => {
@@ -33,8 +32,7 @@ module.exports = (env) => {
             new webpack.DllReferencePlugin({
                 context: __dirname,
                 manifest: require('./wwwroot/dist/vendor-manifest.json')
-            }),
-            new UglifyJSPlugin()
+            })
         ].concat(isDevBuild ? [
             // Plugins that apply in development builds only
             new webpack.SourceMapDevToolPlugin({
