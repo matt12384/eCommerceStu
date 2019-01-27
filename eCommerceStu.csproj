@@ -28,7 +28,7 @@
     <Exec Command="npm install"/>
     <Exec Command="npm rebuild node-sass"/>
     <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod"/>
-    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod"/>
+    <!-- <Exec Command="node node_modules/webpack/bin/webpack.js env.prod"/> -->
     <ItemGroup>
       <DistFiles Include="wwwroot\dist\**"/>
       <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
